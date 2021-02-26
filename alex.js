@@ -8,7 +8,7 @@ const embed = new Discord.MessageEmbed()
 	.setColor('#0099ff');
 
 client.once('ready', async () => {
-	const channel = client.channels.cache.get('222197033908436994');
+	const channel = client.channels.cache.get('token');
 	try {
 		const webhooks = await channel.fetchWebhooks();
 		const webhook = webhooks.first();
@@ -30,4 +30,4 @@ client.events = new Discord.Collection();
     require(`./handlers/${handler}`)(client, Discord);
 })
 
-client.login('ODEzNDUzOTAyNDE3NjI1MDk4.YDPh-w.hGy6uIuXIJbWkxnUS2MIkDA4GUc');
+client.login('token');
